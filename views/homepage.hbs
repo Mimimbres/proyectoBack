@@ -1,0 +1,35 @@
+   <h1>Notas de {{user.username}}</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Asignatura</th>
+                <th>Matematicas</th>
+                <th>Lengua</th>
+                <th>Ingles</th>
+                <th>Fisica</th>
+                <th>Naturales</th>
+                <th>Sociales</th>
+                <th>Educacion Fisica</th>
+                <th>Dibujo Tecnico</th>
+                <th>Comentarios</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each notas}}
+                <tr>
+                    <td>{{@key}}</td>
+                    <td>{{notas.matematicas}}</td>
+                    <td>{{this.lengua}}</td>
+                    <td>{{this.ingles}}</td>
+                    <td>{{this.fisica}}</td>
+                    <td>{{this.naturales}}</td>
+                    <td>{{this.sociales}}</td>
+                    <td>{{this.educacionFisica}}</td>
+                    <td>{{this.dibujoTecnico}}</td>
+                    <td>{{this.comentarios}}</td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</body>
+</html>
