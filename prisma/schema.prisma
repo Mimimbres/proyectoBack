@@ -27,15 +27,15 @@ model Notas {
   userId String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  Matematicas Int
-  Lengua Int
-  Ingles Int
-  Fisica Int
-  Naturales Int
-  Sociales Int
-  EducacionFisica Int
-  DibujoTecnico Int
-  Comentarios String?
+  matematicas Int
+  lengua Int
+  ingles Int
+  fisica Int
+  naturales Int
+  sociales Int
+  educacionFisica Int
+  dibujoTecnico Int
+  comentarios String?
   user User @relation(fields: [userId], references: [id])
 }
 

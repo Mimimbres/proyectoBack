@@ -12,8 +12,7 @@ router.get("/", async (req, res) => {
         userId: req.user.id,
       },
     });
-    
-    res.render("homepage", { user: req.user, notas });
+    res.render("homepage", { user: req.user, notas: newNotas });
   } catch (error) {
     console.error(error);
     res.render("homepage", { user: req.user, error: "Error al obtener las notas" });
