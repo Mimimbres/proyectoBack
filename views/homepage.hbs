@@ -3,32 +3,53 @@
         <thead>
             <tr>
                 <th>Asignatura</th>
-                <th>Matematicas</th>
-                <th>Lengua</th>
-                <th>Ingles</th>
-                <th>Fisica</th>
-                <th>Naturales</th>
-                <th>Sociales</th>
-                <th>Educacion Fisica</th>
-                <th>Dibujo Tecnico</th>
-                <th>Comentarios</th>
+                <th>Nota final</th>
             </tr>
         </thead>
         <tbody>
             {{#each notas}}
-                <tr>
+                
+                    <th>Matematicas</td>
                     <td>{{this.matematicas}}</td>
+                </tr>
+                <tr>
+                    <th>Lengua</td>
                     <td>{{this.lengua}}</td>
+                </tr>
+                <tr>
+                    <th>Ingles</td>
                     <td>{{this.ingles}}</td>
+                
+                <tr>
+                    <th>Fisica</td>
                     <td>{{this.fisica}}</td>
+                </tr>
+                <tr>
+                    <th>Naturales
                     <td>{{this.naturales}}</td>
+                </tr>
+                <tr>
+                    <th>Sociales</td>
                     <td>{{this.sociales}}</td>
+                </tr>
+                <tr>
+                    <th>Educación Física</th>
                     <td>{{this.educacionFisica}}</td>
+                </tr>
+                <tr>
+                    <th>Dibujo Técnico</th>
                     <td>{{this.dibujoTecnico}}</td>
+                </tr>
+                <tr>
+                    <th>Comentarios</th>
                     <td>{{this.comentarios}}</td>
                 </tr>
+                
             {{/each}}
         </tbody>
     </table>
+    <br><br>
+ <a href="/auth/login-page" class="logout-link">Logout</a>
+
 </body>
 </html>

@@ -17,6 +17,7 @@ router.post("/register", async (req, res) => {
         password: hashedPassword,
       },
     });
+    
     res.redirect("/auth/login-page");
   } catch (error) {
     console.log(error);
@@ -42,12 +43,9 @@ router.get("/register-page", (req, res) => {
   res.render("register", { error: req.flash("error") });
 });
 
-router.get('/logout', function(req, res){
-  req.logout(function(err){
-    if(err) return next(err);
-  });
-    res.redirect('/');
-  }
-);
+router.get('/logout', function(req, res) {
+  req.logout();
+  res.redirect('/login'); // Redirect to the login page
+});
 
 module.exports = router;

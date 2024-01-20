@@ -1,8 +1,23 @@
-<h1>Pagina de Feedbacks de los alumnos</h1>
+<h1>Pagina para puntuar a los alumnos</h1>
 
-<ul>
-  {{#each feedbacks}}
-    <li> <img src={{this.user.photo}} alt="photo-student" width="50px" style="border-radius: 100%;">
-      {{this.body}} - {{this.frustrationLevel}} - {{this.user.email}}</li>
+<form action="/students" method="post">
+  <label for="userId">Elija un alumno:</label>
+  <select name="userId" id="userId">
+    {{#each students}}
+      <option value="{{id}}">{{username}}</option>
+    {{/each}}
+  </select>
+
+  <h2>Notas:</h2>
+  {{#each subjects}}
+    <label for="{{this}}">{{this}}:</label>
+    <input type="number" name="{{this}}" id="{{this}}" min="1" max="10" required>
   {{/each}}
-</ul>
+
+  <label for="comentarios">Additional Comments:</label>
+  <textarea name="comentarios" id="comentarios" rows="4"></textarea>
+
+  <button type="submit">Submit</button>
+</form>
+<br><br>
+<a href="/auth/login-page" class="logout-link">Logout</a>
